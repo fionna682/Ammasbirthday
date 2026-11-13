@@ -1141,7 +1141,7 @@ footer {
 }
 
 /* Relaxed animations for phones */
-@media (max-width: 600px) {
+@media (max-width: 60px) {
   .holiday-plane {
     animation: planeFly 12s ease-in-out infinite alternate;
   }
