@@ -1074,58 +1074,6 @@ footer {
   font-size: 25px;
 }
 
-/* Animations */
-@keyframes planeFly {
-  0% {
-    transform: translate(0, 15px) rotate(-8deg);
-  }
-
-  100% {
-    transform: translate(125px, -45px) rotate(8deg);
-  }
-
-}
-
-@keyframes cloudFloat {
-  0% {
-    margin-left: -12px;
-  }
-
-  100% {
-    margin-left: 15px;
-  }
-
-}
-
-@keyframes suitcaseBounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-7px);
-  }
-
-}
-
-@media (max-width: 400px) {
-  .holiday-plane {
-    width: 60px;
-    height: 60px;
-  }
-
-  @keyframes planeFly {
-    0% {
-      transform: translate(0, 15px) rotate(-8deg);
-    }
-
-    100% {
-      transform: translate(75px, -35px) rotate(8deg);
-    }
-
-  }
-
-}
 
 /* Reliable golden stars on every device (hides platform-specific emojis) */
 .floating-star {
@@ -1140,35 +1088,6 @@ footer {
   display: inline-block;
 }
 
-/* Relaxed animations for phones */
-@media (max-width: 60px) {
-  .holiday-plane {
-    animation: planeFly 30s ease-in-out infinite alternate;
-  }
-
-  .holiday-cloud {
-    animation: cloudFloat 15s ease-in-out infinite alternate;
-  }
-
-  .holiday-suitcase {
-    animation: suitcaseBounce 6s ease-in-out infinite;
-  }
-
-  .floating-star {
-    animation-duration: 5s;
-  }
-
-  .screen {
-    animation-duration: 1s;
-  }
-
-  .envelope-flap {
-    transition-duration: 1.1s;
-  }
-
-  .envelope-paper {
-    transition-duration: 1.2s;
-  }
 
 }
 
