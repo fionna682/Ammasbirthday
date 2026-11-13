@@ -527,7 +527,6 @@ h1 em,h2 em {
   position: absolute;
   color: #ddb46e;
   font-size: 32px;
-  animation: twinkle 2.8s infinite alternate;
 }
 
 .star-a {
@@ -538,150 +537,13 @@ h1 em,h2 em {
 .star-b {
   top: 20%;
   right: 11%;
-  animation-delay: .5s;
 }
 
 .star-c {
   top: 46%;
   right: 6%;
-  animation-delay: 1s;
 }
 
-@keyframes twinkle {
-  to {
-    opacity: .35;
-    transform: scale(.65) rotate(20deg);
-  }
-
-}
-
-.skyline {
-  height: 190px;
-  position: relative;
-  margin: 10px auto 0;
-  width: min(620px,100%);
-}
-
-.moon {
-  position: absolute;
-  right: 22%;
-  top: 12px;
-  width: 49px;
-  height: 49px;
-  border-radius: 50%;
-  box-shadow: -13px 4px 0 2px #f1c17b;
-  transform: rotate(-22deg);
-}
-
-.mosque {
-  position: absolute;
-  width: 260px;
-  height: 140px;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.mosque .base {
-  position: absolute;
-  background: #b96b75;
-  width: 240px;
-  height: 57px;
-  bottom: 0;
-  left: 10px;
-  border-radius: 9px 9px 0 0;
-}
-
-.main-dome {
-  position: absolute;
-  width: 145px;
-  height: 85px;
-  background: #b96b75;
-  bottom: 45px;
-  left: 57px;
-  border-radius: 100px 100px 0 0;
-}
-
-.main-dome:before {
-  content: "";
-  position: absolute;
-  width: 3px;
-  height: 26px;
-  background: #b96b75;
-  top: -24px;
-  left: 71px;
-}
-
-.small-dome {
-  position: absolute;
-  background: #ba7680;
-  border-radius: 65px 65px 0 0;
-  width: 85px;
-  height: 55px;
-  bottom: 43px;
-}
-
-.small-dome.left {
-  left: 1px;
-}
-
-.small-dome.right {
-  right: 0;
-}
-
-.minaret {
-  position: absolute;
-  bottom: 28px;
-  width: 17px;
-  height: 127px;
-  background: #b96b75;
-}
-
-.minaret:before {
-  content: "";
-  position: absolute;
-  top: -36px;
-  left: -5px;
-  width: 27px;
-  height: 39px;
-  background: #b96b75;
-  clip-path: polygon(50% 0,100% 100%,0 100%);
-}
-
-.minaret:after {
-  content: "";
-  position: absolute;
-  top: 43px;
-  left: -8px;
-  width: 33px;
-  height: 8px;
-  border-radius: 6px;
-  background: #a95c68;
-}
-
-.minaret-1 {
-  left: 14%;
-  height: 95px;
-}
-
-.minaret-2 {
-  left: 28%;
-}
-
-.minaret-3 {
-  right: 17%;
-  height: 113px;
-}
-
-.water {
-  position: absolute;
-  bottom: 0;
-  left: -30px;
-  right: -30px;
-  height: 29px;
-  background: repeating-linear-gradient(178deg,#d79791 0 5px,#e4a79b 5px 11px);
-  border-radius: 50% 50% 0 0;
-}
 
 .ticket {
   display: flex;
@@ -857,11 +719,6 @@ footer {
     padding: 0 12px;
   }
 
-  .skyline {
-    transform: scale(.85);
-    transform-origin: bottom center;
-  }
-
   .ticket-left {
     padding: 15px;
   }
@@ -880,15 +737,8 @@ footer {
 
 }
 
-@media (prefers-reduced-motion:reduce) {
-  *,*:before,*:after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
 
-}
-
-/* Surprise holiday illustration */
+/* Static holiday illustration: no animations */
 .holiday-scene {
   position: relative;
   width: 100%;
@@ -897,14 +747,9 @@ footer {
   margin: 25px auto;
   overflow: hidden;
   border-radius: 24px;
-  background: linear-gradient(
-    180deg, #f8d8e7 0%,
-    #fce9e6 75%,
-    #fff1da 100%
-  );
+  background: linear-gradient(180deg, #f8d8e7, #fce9e6 75%, #fff1da);
 }
 
-/* Sun */
 .holiday-sun {
   position: absolute;
   width: 65px;
@@ -916,15 +761,13 @@ footer {
   box-shadow: 0 0 35px #ffd99b;
 }
 
-/* Fluffy clouds */
 .holiday-cloud {
   position: absolute;
   width: 90px;
   height: 28px;
   background: white;
   border-radius: 30px;
-  opacity: 0.9;
-  animation: cloudFloat 7s ease-in-out infinite alternate;
+  opacity: .9;
 }
 
 .holiday-cloud::before,
@@ -949,24 +792,10 @@ footer {
   left: 35px;
 }
 
-.cloud-one {
-  top: 60px;
-  left: 10%;
-}
+.cloud-one { top: 60px; left: 10%; }
+.cloud-two { top: 110px; right: 8%; transform: scale(.7); }
+.cloud-three { top: 30px; left: 55%; transform: scale(.5); }
 
-.cloud-two {
-  top: 110px;
-  right: 8%;
-  transform: scale(0.7);
-}
-
-.cloud-three {
-  top: 30px;
-  left: 55%;
-  transform: scale(0.5);
-}
-
-/* Flying plane */
 .holiday-plane {
   position: absolute;
   width: 75px;
@@ -974,7 +803,6 @@ footer {
   top: 75px;
   left: 15%;
   z-index: 3;
-  animation: planeFly 5s ease-in-out infinite alternate;
 }
 
 .holiday-plane svg {
@@ -984,7 +812,6 @@ footer {
   filter: drop-shadow(0 6px 5px #a96d8a44);
 }
 
-/* Flight trail */
 .flight-path {
   position: absolute;
   width: 190px;
@@ -994,10 +821,9 @@ footer {
   border-top: 3px dashed #d28faa;
   border-radius: 50%;
   transform: rotate(-18deg);
-  opacity: 0.7;
+  opacity: .7;
 }
 
-/* Secret destination */
 .holiday-destination {
   position: absolute;
   right: 35px;
@@ -1007,6 +833,9 @@ footer {
 }
 
 .destination-pin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   width: 48px;
   height: 48px;
@@ -1014,9 +843,6 @@ footer {
   transform: rotate(-45deg);
   background: #e58ba9;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-size: 29px;
   font-weight: bold;
   box-shadow: 0 5px 12px #c9879c55;
@@ -1036,14 +862,12 @@ footer {
   color: #704c68;
 }
 
-/* Little suitcase */
 .holiday-suitcase {
   position: absolute;
   bottom: 20px;
   left: 30px;
   width: 65px;
   height: 76px;
-  animation: suitcaseBounce 3s ease-in-out infinite;
 }
 
 .suitcase-handle {
@@ -1069,25 +893,26 @@ footer {
   justify-content: center;
 }
 
-.suitcase-heart {
-  color: white;
-  font-size: 25px;
-}
+.suitcase-heart { color: white; font-size: 25px; }
 
-
-/* Reliable golden stars on every device (hides platform-specific emojis) */
-.floating-star {
-  font-size: 0;
-  font-family: Georgia, serif;
-}
-
+/* Use the same golden star symbol on every device */
+.floating-star { font-size: 0; font-family: Georgia, serif; }
 .floating-star::before {
   content: "✦";
+  display: inline-block;
   font-size: 32px;
   color: #ddb46e;
-  display: inline-block;
 }
 
-
+@media (max-width: 400px) {
+  .holiday-plane { width: 60px; height: 60px; }
+  .holiday-destination { right: 18px; }
+  .destination-label { font-size: 9px; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
