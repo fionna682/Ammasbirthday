@@ -1143,7 +1143,7 @@ footer {
 /* Relaxed animations for phones */
 @media (max-width: 60px) {
   .holiday-plane {
-    animation: planeFly 12s ease-in-out infinite alternate;
+    animation: planeFly 30s ease-in-out infinite alternate;
   }
 
   .holiday-cloud {
