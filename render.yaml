@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: mums-50th-surprise
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
